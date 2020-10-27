@@ -1,0 +1,103 @@
+
+E:\Tools\java00\out\production\java00>echo "使用串行垃圾收集器： ‐XX:+UseSerialGC"
+"使用串行垃圾收集器： ‐XX:+UseSerialGC"
+
+E:\Tools\java00\out\production\java00>java  -Xmx128m -Xloggc:UseSerialGC.128.SG.log  -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.generateGarbage(GCLogAnalysis.java:49)
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.main(GCLogAnalysis.java:26)
+
+E:\Tools\java00\out\production\java00>java  -Xmx512m -Xloggc:UseSerialGC.512.SG.log  -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:6951
+
+E:\Tools\java00\out\production\java00>java  -Xmx1024m -Xloggc:UseSerialGC.1024.SG.log  -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7772
+
+E:\Tools\java00\out\production\java00>java  -Xmx2048m -Xloggc:UseSerialGC.2048.SG.log  -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7515
+
+E:\Tools\java00\out\production\java00>java  -Xmx4086m -Xloggc:UseSerialGC.4086.SG.log  -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:6547
+
+E:\Tools\java00\out\production\java00>echo "使用并行垃圾收集器： ‐XX:+UseParallelGC"
+"使用并行垃圾收集器： ‐XX:+UseParallelGC"
+
+E:\Tools\java00\out\production\java00>java  -Xmx128m -Xloggc:UseParallelGC.128.SG.log  -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.generateGarbage(GCLogAnalysis.java:49)
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.main(GCLogAnalysis.java:26)
+
+E:\Tools\java00\out\production\java00>java  -Xmx512m -Xloggc:UseParallelGC.512.SG.log  -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:6283
+
+E:\Tools\java00\out\production\java00>java  -Xmx1024m -Xloggc:UseParallelGC.1024.SG.log  -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7090
+
+E:\Tools\java00\out\production\java00>java  -Xmx2048m -Xloggc:UseParallelGC.2048.SG.log  -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:8602
+
+E:\Tools\java00\out\production\java00>java  -Xmx4086m -Xloggc:UseParallelGC.4086.SG.log  -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7951
+
+E:\Tools\java00\out\production\java00>echo "使用CMS垃圾收集器： ‐XX:+UseConcMarkSweepGC"
+"使用CMS垃圾收集器： ‐XX:+UseConcMarkSweepGC"
+
+E:\Tools\java00\out\production\java00>java  -Xmx128m -Xloggc:UseConcMarkSweepGC.128.SG.log  -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.generateGarbage(GCLogAnalysis.java:43)
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.main(GCLogAnalysis.java:26)
+
+E:\Tools\java00\out\production\java00>java  -Xmx512m -Xloggc:UseConcMarkSweepGC.512.SG.log  -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:6937
+
+E:\Tools\java00\out\production\java00>java  -Xmx1024m -Xloggc:UseConcMarkSweepGC.1024.SG.log  -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7353
+
+E:\Tools\java00\out\production\java00>java  -Xmx2048m -Xloggc:UseConcMarkSweepGC.2048.SG.log  -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7465
+
+E:\Tools\java00\out\production\java00>java  -Xmx4086m -Xloggc:UseConcMarkSweepGC.4086.SG.log  -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7390
+
+E:\Tools\java00\out\production\java00>echo "使用 G1垃圾收集器： ‐XX:+UseG1GC "
+"使用 G1垃圾收集器： ‐XX:+UseG1GC "
+
+E:\Tools\java00\out\production\java00>java  -Xmx128m -Xloggc:UseG1GC.128.SG.log  -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.generateGarbage(GCLogAnalysis.java:49)
+        at com.huang.java00.lesson02.gc.GCLogAnalysis.main(GCLogAnalysis.java:26)
+
+E:\Tools\java00\out\production\java00>java  -Xmx512m -Xloggc:UseG1GC.512.SG.log  -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7385
+
+E:\Tools\java00\out\production\java00>java  -Xmx1024m -Xloggc:UseG1GC.1024.SG.log  -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7840
+
+E:\Tools\java00\out\production\java00>java  -Xmx2048m -Xloggc:UseG1GC.2048.SG.log  -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:7284
+
+E:\Tools\java00\out\production\java00>java  -Xmx4086m -Xloggc:UseG1GC.4086.SG.log  -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+正在执行...sss
+执行结束!共生成对象次数:6544
+
+E:\Tools\java00\out\production\java00>pause
+请按任意键继续. . .
