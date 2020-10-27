@@ -1,0 +1,114 @@
+echo "使用串行垃圾收集器： ‐XX:+UseSerialGC"
+
+java  -Xmx512m -Xloggc:UseSerialGC.512.SG.log  -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps  -jar gateway-server-0.0.1-SNAPSHOT.jar
+
+
+echo "使用并行垃圾收集器： ‐XX:+UseParallelGC"
+
+java  -Xmx512m -Xloggc:UseParallelGC.512.SG.log  -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps  -jar gateway-server-0.0.1-SNAPSHOT.jar
+
+
+
+echo "使用CMS垃圾收集器： ‐XX:+UseConcMarkSweepGC"
+java  -Xmx512m -Xloggc:UseConcMarkSweepGC.512.SG.log  -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps  -jar gateway-server-0.0.1-SNAPSHOT.jar
+					   
+
+
+echo "使用 G1垃圾收集器： ‐XX:+UseG1GC "
+
+java  -Xmx512m -Xloggc:UseG1GC.512.SG.log  -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCDateStamps com.huang.java00.lesson02.gc.GCLogAnalysis
+
+
+C:\Users\Administrator>sb -u http://localhost:8088/api/hello -c 30 -N 60
+Starting at 2020/10/27 1:18:19
+[Press C to stop the test]
+111460  (RPS: 1677.5)
+---------------Finished!----------------
+Finished at 2020/10/27 1:19:26 (took 00:01:06.5942237)
+Status 200:    111460
+
+RPS: 1822.3 (requests/second)
+Max: 389ms
+Min: 0ms
+Avg: 2.4ms
+
+  50%   below 1ms
+  60%   below 2ms
+  70%   below 3ms
+  80%   below 4ms
+  90%   below 7ms
+  95%   below 9ms
+  98%   below 13ms
+  99%   below 16ms
+99.9%   below 33ms
+
+C:\Users\Administrator>sb -u http://localhost:8088/api/hello -c 30 -N 60
+Starting at 2020/10/27 1:19:54
+[Press C to stop the test]
+115778  (RPS: 1763.4)
+---------------Finished!----------------
+Finished at 2020/10/27 1:21:00 (took 00:01:05.7436221)
+Status 200:    115779
+
+RPS: 1895.3 (requests/second)
+Max: 430ms
+Min: 0ms
+Avg: 3ms
+
+  50%   below 2ms
+  60%   below 3ms
+  70%   below 4ms
+  80%   below 5ms
+  90%   below 7ms
+  95%   below 9ms
+  98%   below 12ms
+  99%   below 15ms
+99.9%   below 31ms
+
+C:\Users\Administrator>sb -u http://localhost:8088/api/hello -c 30 -N 60
+Starting at 2020/10/27 1:21:18
+[Press C to stop the test]
+112858  (RPS: 1722.9)
+---------------Finished!----------------
+Finished at 2020/10/27 1:22:24 (took 00:01:05.6575285)
+Status 200:    112859
+
+RPS: 1844.8 (requests/second)
+Max: 313ms
+Min: 0ms
+Avg: 2.9ms
+
+  50%   below 2ms
+  60%   below 3ms
+  70%   below 4ms
+  80%   below 5ms
+  90%   below 7ms
+  95%   below 9ms
+  98%   below 12ms
+  99%   below 15ms
+99.9%   below 32ms
+
+C:\Users\Administrator>sb -u http://localhost:8088/api/hello -c 30 -N 60
+Starting at 2020/10/27 1:22:45
+[Press C to stop the test]
+106952  (RPS: 1635.4)
+---------------Finished!----------------
+Finished at 2020/10/27 1:23:51 (took 00:01:05.6446010)
+Status 200:    106952
+
+RPS: 1745.1 (requests/second)
+Max: 396ms
+Min: 0ms
+Avg: 3ms
+
+  50%   below 2ms
+  60%   below 3ms
+  70%   below 4ms
+  80%   below 5ms
+  90%   below 7ms
+  95%   below 10ms
+  98%   below 13ms
+  99%   below 17ms
+99.9%   below 39ms
+
+C:\Users\Administrator>
